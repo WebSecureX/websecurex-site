@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>WebSecureX | Courses</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body{background:radial-gradient(circle at top,#0b0b1a,#060616);color:#eee;font-family:'Poppins',sans-serif;margin:0;}
+/* navbar same as before */
+.navbar{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:15px 60px;background:rgba(10,10,30,0.85);border-bottom:1px solid #00f7ff33;backdrop-filter:blur(10px);box-shadow:0 0 20px #00f7ff33;animation:glowBorder 5s infinite alternate;}
+@keyframes glowBorder{from{box-shadow:0 0 15px #00f7ff55;}to{box-shadow:0 0 25px #00f7ffaa;}}
+.nav-left{display:flex;align-items:center;gap:10px;}
+.nav-left img{width:70px;filter:drop-shadow(0 0 8px #00f7ff);}
+.nav-left h1{color:#00f7ff;font-size:28px;font-weight:600;text-shadow:0 0 15px #00f7ff;}
+.nav-links a{margin:0 18px;color:#f9f7f7;text-decoration:none;position:relative;}
+.nav-links a:hover{color:#00f7ff;text-shadow:0 0 10px #00f7ff;}
+@media(max-width:768px){.navbar{flex-direction:column;padding:20px;text-align:center;}.nav-links a{display:block;margin:8px 0;}}
+
+.hero{text-align:center;padding:120px 20px 40px;}
+.hero h1{color:#00f7ff;font-size:46px;}
+.hero p{color:#ccc;max-width:650px;margin:0 auto;}
+
+.courses{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;max-width:1100px;margin:60px auto;padding:0 20px;}
+.course-card{background:rgba(25,25,60,0.9);border:1px solid #00f7ff33;border-radius:15px;padding:30px;transition:0.3s;text-align:center;}
+.course-card:hover{transform:translateY(-5px);box-shadow:0 0 25px #00f7ff55;}
+.course-card h3{color:#00f7ff;margin-bottom:10px;}
+.course-card p{color:#ccc;font-size:15px;}
+.course-card button{margin-top:10px;background:#00f7ff;color:#000;border:none;padding:10px 20px;border-radius:25px;font-weight:600;cursor:pointer;transition:0.3s;}
+.course-card button:hover{box-shadow:0 0 25px #00f7ff;}
+footer{text-align:center;padding:30px;color:#999;background:#0d0d1d;border-top:1px solid #00f7ff33;margin-top:80px;}
+</style>
+</head>
+<body>
+<header class="navbar">
+  <div class="nav-left">
+    <h1>WebSecureX</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="careers.html">Careers</a>
+    <a href="course.html">Courses</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Cybersecurity Training & Courses</h1>
+  <p>Empower yourself with hands-on training from industry experts. Learn ethical hacking, network defense, and more.</p>
+</section>
+
+<section class="courses">
+  <div class="course-card">
+    <h3>💻 Ethical Hacking Mastery</h3>
+    <p>Become a certified ethical hacker with real-world penetration testing simulations.</p>
+    <button>Enroll Now</button>
+  </div>
+  <div class="course-card">
+    <h3>🧩 Network Security Fundamentals</h3>
+    <p>Understand firewalls, protocols, and threat mitigation from the ground up.</p>
+    <button>Start Learning</button>
+  </div>
+  <div class="course-card">
+    <h3>☁️ Cloud Security Pro</h3>
+    <p>Protect cloud infrastructures with AWS, Azure, and Google Cloud security labs.</p>
+    <button>Join Course</button>
+  </div>
+  <div class="course-card">
+    <h3>🛡️ Incident Response & Forensics</h3>
+    <p>Learn rapid detection and recovery from cyber incidents with forensic tools.</p>
+    <button>Apply Now</button>
+  </div>
+</section>
+
+<footer>&copy; 2025 WebSecureX — Educating the Future Defenders</footer>
+<script>
+  document.querySelectorAll('.nav-links a').forEach(link=>{
+    if(link.href===window.location.href){
+      link.style.color='#00f7ff';link.style.textShadow='0 0 15px #00f7ff';
+    }
+  });
+</script>
+</body>
+</html>

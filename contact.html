@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>WebSecureX | Contact</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+/* === GLOBAL STYLE === */
+body {
+  background: radial-gradient(circle at top, #0b0b1a, #060616);
+  color: #eee;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* === CYBER NAVBAR === */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background: rgba(10,10,30,0.85);
+  border-bottom: 1px solid #00f7ff33;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px #00f7ff33;
+  animation: glowBorder 5s infinite alternate;
+}
+
+@keyframes glowBorder {
+  from { box-shadow: 0 0 15px #00f7ff55; }
+  to { box-shadow: 0 0 25px #00f7ffaa; }
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-left img {
+  width: 70px;
+  filter: drop-shadow(0 0 8px #00f7ff);
+}
+
+.nav-left h1 {
+  color: #00f7ff;
+  font-size: 28px;
+  font-weight: 600;
+  text-shadow: 0 0 15px #00f7ff;
+}
+
+.nav-links a {
+  margin: 0 18px;
+  color: #f9f7f7;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #00f7ff;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #00f7ff;
+  text-shadow: 0 0 10px #00f7ff;
+}
+
+/* === HERO SECTION === */
+.hero {
+  text-align: center;
+  padding: 120px 20px 60px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #00f7ff;
+  text-shadow: 0 0 25px #00f7ff66;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* === CONTACT FORM === */
+form {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(25,25,60,0.9);
+  border: 1px solid #00f7ff33;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #00f7ff22;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 1.2s ease;
+}
+
+form h2 {
+  text-align: center;
+  color: #00f7ff;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  margin: 12px 0;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #0d0d2a;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 12px #00f7ff88;
+}
+
+button {
+  margin-top: 15px;
+  background: #00f7ff;
+  color: #000;
+  border: none;
+  padding: 12px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  box-shadow: 0 0 25px #00f7ff;
+  transform: translateY(-2px);
+}
+
+/* === CONTACT INFO SECTION === */
+.contact-info {
+  max-width: 800px;
+  margin: 60px auto;
+  text-align: center;
+  color: #ccc;
+}
+
+.contact-info h3 {
+  color: #00f7ff;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.contact-info a {
+  color: #00f7ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-info a:hover {
+  text-shadow: 0 0 8px #00f7ff;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #999;
+  background: #0d0d1d;
+  border-top: 1px solid #00f7ff33;
+  margin-top: 60px;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .nav-links a {
+    display: block;
+    margin: 8px 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- === NAVBAR === -->
+<header class="navbar">
+  <div class="nav-left">
+    <h1>WebSecureX</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="careers.html">Careers</a>
+    <a href="course.html">Courses</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- === HERO SECTION === -->
+<section class="hero">
+  <h1>Contact WebSecureX</h1>
+  <p>We’re here to help — reach out for business inquiries, partnerships, or cybersecurity consultations.</p>
+</section>
+
+<!-- === CONTACT FORM === -->
+<form onsubmit="event.preventDefault(); alert('✅ Message sent successfully! We’ll contact you soon.');">
+  <h2>📩 Get in Touch</h2>
+  <input type="text" placeholder="Your Full Name" required>
+  <input type="email" placeholder="Your Email Address" required>
+  <textarea rows="6" placeholder="Write your message here..." required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+<!-- === CONTACT INFO === -->
+<section class="contact-info">
+  <h3>Other Ways to Reach Us</h3>
+  <p>📧 Email: <a href="mailto:websecurex22@gmail.com">websecurex22@gmail.com</a></p>
+  <p>🌐 Website: <a href="https://websecurex.com">www.websecurex.com</a></p>
+  <p>📍 Headquarters: Mumbai, India</p>
+</section>
+
+<!-- === FOOTER === -->
+<footer>
+  &copy; 2025 WebSecureX — Protecting the Digital World
+</footer>
+
+<!-- === ACTIVE LINK SCRIPT === -->
+<script>
+  const links = document.querySelectorAll('.nav-links a');
+  links.forEach(link => {
+    if (link.href === window.location.href) {
+      link.style.color = '#00f7ff';
+      link.style.textShadow = '0 0 15px #00f7ff';
+    }
+  });
+</script>
+
+</body>
+</html>

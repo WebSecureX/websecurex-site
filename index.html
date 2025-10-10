@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WebSecureX - Cyber Security Experts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #060616;
+      color: #f0f0f0;
+      overflow-x: hidden;
+    }
+
+    /* ===== CYBER BACKGROUND ===== */
+    #cyber-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: radial-gradient(circle, #0d0d2a 0%, #030312 100%);
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px; height: 4px;
+      background: #00f7ff;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: moveParticle 10s linear infinite;
+    }
+
+    @keyframes moveParticle {
+      0% { transform: translateY(0px); opacity: 0.8; }
+      100% { transform: translateY(-800px); opacity: 0; }
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      position: fixed;
+      width: 100%;
+      background: rgba(10, 10, 30, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #00f7ff33;
+      z-index: 10;
+    }
+
+    header img {
+      width: 100px;
+      transition: 0.3s;
+    }
+    header img:hover { transform: scale(1.05); }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #00f7ff;
+      transition: width 0.3s;
+    }
+
+    nav a:hover {
+      color: #00f7ff;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      color: #00f7ff;
+      text-shadow: 0 0 30px #00f7ff66;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #ccc;
+      margin-top: 20px;
+      animation: fadeIn 3s ease;
+      max-width: 700px;
+    }
+
+    .hero button {
+      margin-top: 30px;
+      background: #00f7ff;
+      color: #000;
+      border: none;
+      padding: 14px 40px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .hero button:hover {
+      box-shadow: 0 0 25px #00f7ff;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== SECTION TEMPLATE ===== */
+    .section {
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #00f7ff;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      color: #ccc;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+
+    /* ===== CARDS ===== */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: rgba(25, 25, 60, 0.9);
+      border: 1px solid #00f7ff33;
+      border-radius: 15px;
+      padding: 25px;
+      transition: 0.4s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px #00f7ff33;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, #00f7ff33, transparent);
+      transition: 0.5s;
+    }
+
+    .card:hover::before {
+      left: 100%;
+    }
+
+    .card h3 {
+      color: #00f7ff;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #ccc;
+      line-height: 1.5;
+    }
+
+    /* ===== CAREERS SECTION ===== */
+    .career-banner {
+      margin-top: 40px;
+      padding: 50px;
+      background: linear-gradient(135deg, #101026, #0b0b18);
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00f7ff22;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .career-banner button {
+      background: #00f7ff;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      padding: 12px 25px;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .career-banner button:hover {
+      box-shadow: 0 0 20px #00f7ff;
+    }
+
+    /* ===== CHATBOT ===== */
+    .chatbot-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #00f7ff;
+      color: #000;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 0 20px #00f7ff;
+      transition: 0.3s;
+      z-index: 20;
+    }
+
+    .chatbot-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px #00f7ff;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0d0d1d;
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #00f7ff33;
+      margin-top: 80px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 40px; }
+      header { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="cyber-bg"></div>
+
+<header>
+  <img src="websecurex_logo_transparent.png.png" alt="WebSecureX Logo">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#careers">Careers</a>
+    <a href="#courses">Courses</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+  <h1>WebSecureX
+  </h1>
+  <p>Empowering organizations to stay resilient against tomorrow’s cyber threats with AI-driven protection and real-time intelligence.</p>
+  <button onclick="location.href='#services'">Explore Our Solutions</button>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <h2>Our Core Services</h2>
+  <p>Comprehensive, cutting-edge cybersecurity services designed to protect, detect, and respond effectively to modern threats.</p>
+  <div class="cards">
+    <div class="card">
+      <h3>🔒 Penetration Testing</h3>
+      <p>Simulate real-world attacks to find vulnerabilities before hackers do — strengthen your systems with our ethical hackers.</p>
+    </div>
+    <div class="card">
+      <h3>🧠 Threat Intelligence</h3>
+      <p>Harness AI and human expertise to detect and prevent cyber attacks before they occur, 24/7.</p>
+    </div>
+    <div class="card">
+      <h3>⚙️ SOC & Incident Response</h3>
+      <p>Rapid detection and response from our advanced Security Operations Center (SOC) to keep your business running securely.</p>
+    </div>
+    <div class="card">
+       <h3>💻 Business Website Development</h3>
+      <p>We don’t just protect — we build! Our creative developers craft fast, secure, and elegant websites for businesses, startups, and organizations worldwide.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CAREERS -->
+<section id="careers" class="section">
+  <h2>💼 Careers at WebSecureX</h2>
+  <p>Join our team of elite cybersecurity experts. Work on cutting-edge technologies and secure the digital future.</p>
+  <div class="career-banner">
+    <h3>We're hiring for:</h3>
+    <p>Penetration Testers, SOC Analysts, Cybersecurity Consultants, and Ethical Hackers.</p>
+    <button onclick="location.href='careers.html'">Apply Now</button>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses" class="section">
+  <h2>🎓 Learn Cybersecurity</h2>
+  <p>Start your cybersecurity journey with our 3-Month Certified Bootcamp. Hands-on learning from industry experts.</p>
+  <div class="career-banner">
+    <h3>3-Month Cybersecurity Bootcamp</h3>
+    <p>Get certified, learn ethical hacking, SOC operations, and more — all for ₹2,599 only!</p>
+    <button onclick="location.href='course.html'">Enroll Now 🚀</button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>📞 Contact Us</h2>
+  <p>Have questions or need a consultation? We’re here to help.</p>
+  <p>Email: <a href="mailto:websecurex22@gmail.com" style="color:#00f7ff;">websecurex22@gmail.com</a></p>
+  <p>Connect. Protect. Evolve.</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 WebSecureX | All Rights Reserved | <a href="mailto:websecurex22@gmail.com">Contact</a></p>
+</footer>
+
+<!-- Chatbot Icon -->
+<div class="chatbot-btn" onclick="alert('Chatbot Coming Soon 🤖')">💬</div>
+
+<script>
+  // Create animated cyber particles
+  const bg = document.getElementById('cyber-bg');
+  for (let i = 0; i < 80; i++) {
+    const p = document.createElement('div');
+    p.classList.add('particle');
+    p.style.left = Math.random() * 100 + '%';
+    p.style.top = Math.random() * 100 + '%';
+    p.style.animationDuration = (8 + Math.random() * 5) + 's';
+    p.style.opacity = Math.random();
+    bg.appendChild(p);
+  }
+</script>
+
+</body>
+</html>

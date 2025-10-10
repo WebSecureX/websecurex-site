@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>WebSecureX | Careers</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body{background:radial-gradient(circle at top,#0b0b1a,#060616);color:#eee;font-family:'Poppins',sans-serif;margin:0;}
+.navbar{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:15px 60px;background:rgba(10,10,30,0.85);border-bottom:1px solid #00f7ff33;backdrop-filter:blur(10px);box-shadow:0 0 20px #00f7ff33;}
+.nav-left{display:flex;align-items:center;gap:10px;}
+.nav-left img{width:70px;filter:drop-shadow(0 0 8px #00f7ff);}
+.nav-left h1{color:#00f7ff;font-size:28px;font-weight:600;text-shadow:0 0 15px #00f7ff;}
+.nav-links a{margin:0 18px;color:#f9f7f7;text-decoration:none;transition:0.3s;}
+.nav-links a:hover{color:#00f7ff;text-shadow:0 0 10px #00f7ff;}
+@media(max-width:768px){.navbar{flex-direction:column;text-align:center;padding:20px;}.nav-links a{display:block;margin:8px 0;}}
+
+.hero{text-align:center;padding:120px 20px 40px;}
+.hero h1{color:#00f7ff;font-size:46px;}
+.hero p{color:#ccc;max-width:700px;margin:0 auto;}
+
+.jobs{max-width:900px;margin:60px auto;padding:0 20px;display:flex;flex-direction:column;gap:25px;}
+.job-card{background:rgba(25,25,60,0.9);border:1px solid #00f7ff33;border-radius:15px;padding:30px;transition:0.3s;}
+.job-card:hover{transform:translateY(-5px);box-shadow:0 0 25px #00f7ff55;}
+.job-card h3{color:#00f7ff;margin-bottom:8px;}
+.job-card p{color:#ccc;font-size:15px;margin:4px 0 12px;}
+.job-card button{background:#00f7ff;color:#000;border:none;padding:10px 25px;border-radius:25px;font-weight:600;cursor:pointer;transition:0.3s;}
+.job-card button:hover{box-shadow:0 0 25px #00f7ff;}
+
+footer{text-align:center;padding:30px;color:#999;background:#0d0d1d;border-top:1px solid #00f7ff33;margin-top:80px;}
+</style>
+</head>
+<body>
+<header class="navbar">
+  <div class="nav-left">
+    <h1>WebSecureX</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="careers.html">Careers</a>
+    <a href="course.html">Courses</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Join the WebSecureX Team</h1>
+  <p>Be part of a mission to secure the digital world — work with top cybersecurity experts globally.</p>
+</section>
+
+<section class="jobs">
+  <div class="job-card">
+    <h3>🔐 Cybersecurity Analyst</h3>
+    <p>Experience: 2+ years | Location: Remote</p>
+    <p>Monitor threats, analyze security incidents, and implement mitigation strategies.</p>
+    <button>Apply Now</button>
+  </div>
+  <div class="job-card">
+    <h3>🧠 Ethical Hacker (Pen Tester)</h3>
+    <p>Experience: 1–3 years | Location: Hybrid</p>
+    <p>Conduct penetration testing, exploit analysis, and vulnerability research.</p>
+    <button>Apply Now</button>
+  </div>
+  <div class="job-card">
+    <h3>☁️ Cloud Security Engineer</h3>
+    <p>Experience: 3+ years | Location: Remote</p>
+    <p>Design secure cloud architectures and automation pipelines for enterprise clients.</p>
+    <button>Apply Now</button>
+  </div>
+</section>
+
+<footer>&copy; 2025 WebSecureX — Careers in Cyber Excellence</footer>
+<script>
+  document.querySelectorAll('.nav-links a').forEach(link=>{
+    if(link.href===window.location.href){
+      link.style.color='#00f7ff';link.style.textShadow='0 0 15px #00f7ff';
+    }
+  });
+</script>
+</body>
+</html>

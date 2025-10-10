@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>WebSecureX | Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+/* --- Global + Navbar copied from contact page --- */
+body{background:radial-gradient(circle at top,#0b0b1a,#060616);color:#eee;font-family:'Poppins',sans-serif;margin:0;overflow-x:hidden;}
+.navbar{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:15px 60px;background:rgba(10,10,30,0.85);border-bottom:1px solid #00f7ff33;backdrop-filter:blur(10px);box-shadow:0 0 20px #00f7ff33;animation:glowBorder 5s infinite alternate;}
+@keyframes glowBorder{from{box-shadow:0 0 15px #00f7ff55;}to{box-shadow:0 0 25px #00f7ffaa;}}
+.nav-left{display:flex;align-items:center;gap:10px;}
+.nav-left img{width:70px;filter:drop-shadow(0 0 8px #00f7ff);}
+.nav-left h1{color:#00f7ff;font-size:28px;font-weight:600;text-shadow:0 0 15px #00f7ff;}
+.nav-links a{margin:0 18px;color:#f9f7f7;font-weight:500;text-decoration:none;position:relative;transition:0.3s;}
+.nav-links a::after{content:'';position:absolute;width:0%;height:2px;background:#00f7ff;left:0;bottom:-4px;transition:width 0.3s ease;}
+.nav-links a:hover::after{width:100%;}
+.nav-links a:hover{color:#00f7ff;text-shadow:0 0 10px #00f7ff;}
+@media(max-width:768px){.navbar{flex-direction:column;text-align:center;padding:20px;}.nav-links a{display:block;margin:8px 0;}}
+
+/* --- Page content --- */
+.hero{text-align:center;padding:120px 20px 60px;}
+.hero h1{font-size:48px;color:#00f7ff;text-shadow:0 0 25px #00f7ff66;}
+.hero p{font-size:18px;color:#ccc;max-width:700px;margin:0 auto;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;max-width:1100px;margin:70px auto;padding:0 20px;}
+.service-card{background:rgba(25,25,60,0.9);border:1px solid #00f7ff33;border-radius:15px;padding:30px;text-align:center;transition:0.3s;box-shadow:0 0 25px #00f7ff22;}
+.service-card:hover{transform:translateY(-5px);box-shadow:0 0 35px #00f7ff55;}
+.service-card h3{color:#00f7ff;margin-bottom:10px;}
+.service-card p{color:#ccc;font-size:15px;line-height:1.6;}
+footer{text-align:center;padding:30px;color:#999;background:#0d0d1d;border-top:1px solid #00f7ff33;margin-top:80px;}
+</style>
+</head>
+<body>
+<header class="navbar">
+  <div class="nav-left">
+    <h1>WebSecureX</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="careers.html">Careers</a>
+    <a href="course.html">Courses</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Our Cybersecurity Services</h1>
+  <p>We offer world-class protection and proactive solutions for your digital ecosystem.</p>
+</section>
+
+<section class="services-grid">
+  <div class="service-card">
+    <h3>🧠 Penetration Testing</h3>
+    <p>Uncover vulnerabilities before hackers do — with simulated attacks by certified experts.</p>
+  </div>
+  <div class="service-card">
+    <h3>🔒 Network Security</h3>
+    <p>Advanced threat monitoring, firewalls, and intrusion prevention for your critical assets.</p>
+  </div>
+  <div class="service-card">
+    <h3>☁️ Cloud Defense</h3>
+    <p>Secure AWS, Azure, and Google Cloud environments with multi-layer encryption and AI alerts.</p>
+  </div>
+  <div class="service-card">
+    <h3>📊 Security Audits</h3>
+    <p>Comprehensive assessments ensuring compliance with ISO, GDPR, and other standards.</p>
+  </div>
+  <div class="service-card">
+    <h3>🛡️ Incident Response</h3>
+    <p>Rapid containment, investigation, and recovery from breaches or cyber threats.</p>
+  </div>
+  <div class="service-card">
+    <h3>🔍 Digital Forensics</h3>
+    <p>Trace attacks, collect digital evidence, and protect your data integrity during investigations.</p>
+  </div>
+</section>
+
+<footer>&copy; 2025 WebSecureX — Securing the Future</footer>
+<script>
+  document.querySelectorAll('.nav-links a').forEach(link=>{
+    if(link.href===window.location.href){
+      link.style.color='#00f7ff';link.style.textShadow='0 0 15px #00f7ff';
+    }
+  });
+</script>
+</body>
+</html>
