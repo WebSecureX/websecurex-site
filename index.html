@@ -4,7 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>WebSecureX - Cyber Security Experts</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="websecurex_logo_transparent.png.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="websecurex_logo_transparent.png.png">
+  <link rel="apple-touch-icon" href="websecurex_logo_transparent.png.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+ 
+
   <style>
     * {
       margin: 0;
@@ -222,6 +227,21 @@
   box-shadow: 0 0 20px #00f7ff66;
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr; /* stack on smaller screens */
+  }
+}
+
+
 
     /* ===== CAREERS SECTION ===== */
     .career-banner {
@@ -326,7 +346,7 @@
 <section id="home" class="hero">
   <h1>WebSecureX
   </h1>
-  <p> Hackers Don’t Sleep, Neither Do We</p>
+  <p> We Build, We Secure, You Grow</p>
   <p> Protecting Brands, Building Trust</p>
   <button onclick="location.href='#services'">Explore Our Solutions</button>
 </section>
@@ -341,19 +361,20 @@
       <p>Simulate real-world attacks to find vulnerabilities before hackers do — strengthen your systems with our ethical hackers.</p>
     </div>
     <div class="card">
-       <h3>💻 Business Website Development</h3>
+      <h3>💻 Business Website Development</h3>
       <p>We don’t just protect — we build! Our creative developers craft fast, secure, and elegant websites for businesses, startups, and organizations worldwide.</p>
     </div>
-        <div class="card">
-       <h3>📱 Social Media Handling </h3>
+    <div class="card">
+      <h3>📱 Social Media Handling</h3>
       <p>From content creation to audience engagement, we handle your social media with precision to amplify your brand’s reach and impact.</p>
     </div>
-        <div class="card">
-       <h3>🎨 Graphic Designing </h3>
+    <div class="card">
+      <h3>🎨 Graphic Designing</h3>
       <p>We craft eye-catching designs that bring your brand to life — from logos to social media visuals.</p>
     </div>
   </div>
 </section>
+
 
 
 <!-- COURSES -->
