@@ -4,12 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>WebSecureX - Cyber Security Experts</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="websecurex_logo_transparent.png.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="websecurex_logo_transparent.png.png">
-  <link rel="apple-touch-icon" href="websecurex_logo_transparent.png.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
- 
 
+  <!-- Updated BIGGER ICONS for browser tab and devices -->
+  <link rel="icon" href="Add_a_heading__4_-removebg-preview.png" sizes="256x256" type="image/png">
+  <link rel="icon" href="Add_a_heading__4_-removebg-preview.png" sizes="192x192" type="image/png">
+  <link rel="icon" href="Add_a_heading__4_-removebg-preview.png" sizes="128x128" type="image/png">
+  <link rel="icon" href="Add_a_heading__4_-removebg-preview.png" sizes="64x64" type="image/png">
+  <link rel="apple-touch-icon" href="Add_a_heading__4_-removebg-preview.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+ 
   <style>
     * {
       margin: 0;
@@ -53,20 +59,23 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 60px;
+      padding: 20px 50px;
       position: fixed;
       width: 100%;
       background: rgba(10, 10, 30, 0.85);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid #00f7ff33;
       z-index: 10;
+      height: 110px;
     }
 
     header img {
-      width: 100px;
+      width: 170px;
+      filter: drop-shadow(0 0 8px #00f7ffaa);
       transition: 0.3s;
     }
-    header img:hover { transform: scale(1.05); }
+
+    header img:hover { transform: scale(1.08); }
 
     nav a {
       color: #ccc;
@@ -74,6 +83,7 @@
       margin: 0 20px;
       font-weight: 500;
       position: relative;
+      font-size: 17px;
     }
 
     nav a::after {
@@ -87,13 +97,8 @@
       transition: width 0.3s;
     }
 
-    nav a:hover {
-      color: #00f7ff;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
+    nav a:hover { color: #00f7ff; }
+    nav a:hover::after { width: 100%; }
 
     /* ===== HERO ===== */
     .hero {
@@ -168,9 +173,9 @@
     /* ===== CARDS ===== */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 25px;
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
@@ -189,131 +194,20 @@
       box-shadow: 0 0 30px #00f7ff33;
     }
 
-    .card::before {
-      content: "";
-      position: absolute;
-      top: 0; left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(120deg, transparent, #00f7ff33, transparent);
-      transition: 0.5s;
-    }
-
-    .card:hover::before {
-      left: 100%;
-    }
-
     .card h3 {
       color: #00f7ff;
       margin-bottom: 10px;
     }
 
-    .card p {
-      color: #ccc;
-      line-height: 1.5;
-    }
-    .card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-top: 15px;
-  transition: 0.3s;
-  box-shadow: 0 0 10px #00f7ff33;
-}
-
-.card img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px #00f7ff66;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 25px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr; /* stack on smaller screens */
-  }
-}
-
-
-
-    /* ===== CAREERS SECTION ===== */
-    .career-banner {
-      margin-top: 40px;
-      padding: 50px;
-      background: linear-gradient(135deg, #101026, #0b0b18);
-      border-radius: 15px;
-      box-shadow: 0 0 20px #00f7ff22;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 42px; }
+      header { flex-direction: column; height: auto; padding: 15px; }
+      header img { width: 190px; margin-bottom: 10px; }
+      nav { margin-top: 10px; }
+      .cards { grid-template-columns: 1fr; }
     }
 
-    .career-banner button {
-      background: #00f7ff;
-      border: none;
-      color: #000;
-      font-weight: bold;
-      padding: 12px 25px;
-      border-radius: 50px;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: 0.3s;
-    }
-
-    .career-banner button:hover {
-      box-shadow: 0 0 20px #00f7ff;
-    }
-
-    /* ===== CHATBOT ===== */
-    .chatbot-btn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #00f7ff;
-      color: #000;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      box-shadow: 0 0 20px #00f7ff;
-      transition: 0.3s;
-      z-index: 20;
-    }
-
-    .chatbot-btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 30px #00f7ff;
-    }
-
-    #demo-websites .card button {
-  background: #00f7ff;
-  border: none;
-  color: #000;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#demo-websites .card button:hover {
-  box-shadow: 0 0 20px #00f7ff;
-  transform: scale(1.05);
-}
-
-
-    /* ===== FOOTER ===== */
     footer {
       background: #0d0d1d;
       color: #aaa;
@@ -322,11 +216,6 @@
       border-top: 1px solid #00f7ff33;
       margin-top: 80px;
     }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 40px; }
-      header { flex-direction: column; text-align: center; }
-    }
   </style>
 </head>
 <body>
@@ -334,7 +223,7 @@
 <div id="cyber-bg"></div>
 
 <header>
-  <img src="websecurex_logo_transparent.png.png" alt="WebSecureX Logo">
+  <img src="Add_a_heading__4_-removebg-preview.png" alt="WebSecureX Logo">
   <nav>
     <a href="#home">Home</a>
     <a href="#services">Services</a>
@@ -342,68 +231,47 @@
   </nav>
 </header>
 
-<!-- HERO SECTION -->
 <section id="home" class="hero">
-  <h1>WebSecureX
-  </h1>
+  <h1>WebSecureX</h1>
   <p> We Build, We Secure, You Grow</p>
   <p> Protecting Brands, Building Trust</p>
   <button onclick="location.href='#services'">Explore Our Solutions</button>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="section">
-  <h2>Our Core Services</h2>
+<!-- SERVICES --> <section id="services" class="section"> <h2>Our Core Services</h2> 
   <p>Comprehensive, cutting-edge cybersecurity services designed to protect, detect, and respond effectively to modern threats.</p>
-  <div class="cards">
-    <div class="card">
-      <h3>🔒 Penetration Testing</h3>
-      <p>Simulate real-world attacks to find vulnerabilities before hackers do — strengthen your systems with our ethical hackers.</p>
-    </div>
-    <div class="card">
-      <h3>💻 Business Website Development</h3>
-      <p>We don’t just protect — we build! Our creative developers craft fast, secure, and elegant websites for businesses, startups, and organizations worldwide.</p>
-    </div>
-    <div class="card">
-      <h3>📱 Social Media Handling</h3>
-      <p>From content creation to audience engagement, we handle your social media with precision to amplify your brand’s reach and impact.</p>
-    </div>
-    <div class="card">
-      <h3>🎨 Graphic Designing</h3>
-      <p>We craft eye-catching designs that bring your brand to life — from logos to social media visuals.</p>
-    </div>
-  </div>
-</section>
+   <div class="cards"> <div class="card"> <h3>🔒 Penetration Testing</h3> 
+    <p>Simulate real-world attacks to find vulnerabilities before hackers do — strengthen your systems with our ethical hackers.</p> </div> 
+   <div class="card"> <h3>💻 Business Website Development</h3> 
+    <p>We don’t just protect — we build! Our creative developers craft fast, secure, and elegant websites for businesses, startups, and organizations worldwide.</p> </div>
+    <div class="card"> <h3>📱 Social Media Handling</h3> 
+      <p>From content creation to audience engagement, we handle your social media with precision to amplify your brand’s reach and impact.</p> </div> 
+    <div class="card"> <h3>🎨 Graphic Designing</h3> 
+      <p>We craft eye-catching designs that bring your brand to life — from logos to social media visuals.</p> </div> </div>
+   </section>
 
-
-
-<!-- COURSES -->
-<section id="courses" class="section">
-  <h2>🎓 How We Work</h2>
-  <ol>
-        <li><strong>Understand:</strong> We learn about your goals, tech stack, and requirements.</li>
-        <li><strong>Build / Test:</strong> We develop or test using industry-standard tools and frameworks.</li>
-        <li><strong>Deliver & Support:</strong> We provide reports, fixes, and post-project support.</li>
-      </ol>
-</section>
-
-<!-- CONTACT -->
+   <!-- COURSES --> 
+    <section id="courses" class="section"> 
+    <h2>🎓 How We Work</h2>
+       <ol>
+       <li><strong>Understand:</strong> We learn about your goals, tech stack, and requirements.</li> 
+       <li><strong>Build / Test:</strong> We develop or test using industry-standard tools and frameworks.</li>
+       <li><strong>Deliver & Support:</strong> We provide reports, fixes, and post-project support.</li> 
+      </ol> 
+    </section>
 <section id="contact" class="section">
   <h2>📞 Contact Us</h2>
   <p> Ready to build or secure your website? Book a free 15-minute consultation</p>
   <p>Email: <a href="mailto:websecurex22@gmail.com" style="color:#00f7ff;">websecurex22@gmail.com</a></p>
+  <p>Phone : 8433971377</p>
   <p>Connect. Protect. Evolve.</p>
 </section>
 
 <footer>
-  <p>&copy; 2025 WebSecureX | All Rights Reserved | <a href="mailto:websecurex22@gmail.com">Contact</a></p>
+  <p>&copy; 2025 WebSecureX | All Rights Reserved</p>
 </footer>
 
-<!-- Chatbot Icon -->
-<div class="chatbot-btn" onclick="alert('Chatbot Coming Soon 🤖')">💬</div>
-
 <script>
-  // Create animated cyber particles
   const bg = document.getElementById('cyber-bg');
   for (let i = 0; i < 80; i++) {
     const p = document.createElement('div');
@@ -414,26 +282,6 @@
     p.style.opacity = Math.random();
     bg.appendChild(p);
   }
-</script>
-
-<meta property="og:title" content="WebSecureX – Cybersecurity & Website Protection">
-<meta property="og:description" content="Secure your website with WebSecureX’s SSL, firewall, and threat monitoring solutions.">
-<meta property="og:image" content="https://websecurex.in/og-image.jpg">
-<meta property="og:url" content="https://websecurex.in">
-<meta name="twitter:card" content="summary_large_image">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "WebSecureX",
-  "url": "https://websecurex.in",
-  "logo": "https://websecurex.in/logo.png",
-  "sameAs": [
-    "https://www.instagram.com/websecurex/",
-    "https://www.linkedin.com/company/websecurex/"
-  ]
-}
 </script>
 
 </body>
