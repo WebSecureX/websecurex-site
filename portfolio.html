@@ -212,17 +212,22 @@ h2 {
   }
 
   /* Mobile Menu */
-  .nav-links {
-    top: 65px;
-    width: 75%;
-    right: -100%;
-    border-radius: 12px 0 0 12px;
-    box-shadow: -10px 0 25px rgba(0,0,0,0.1);
-  }
+ .nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center items */
+}
 
-  .nav-links li a {
-    font-size: 15px;
-  }
+.nav-links li {
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links li a {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+}
 
   /* Section spacing */
   section {
@@ -295,8 +300,6 @@ h2 {
 
   <ul class="nav-links" id="navLinks">
     <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a class="active" href="portfolio.html">Portfolio</a></li>
   </ul>
 
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
