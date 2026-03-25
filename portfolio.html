@@ -195,7 +195,7 @@ h2 {
 .whatsapp-float img { width: 38px; }
 
 /* 📱 Mobile Responsive */
-
+/* ================= MOBILE FIX (PREMIUM) ================= */
 @media (max-width: 768px) {
 
   /* Navbar Fix */
@@ -248,13 +248,17 @@ h2 {
   }
 
   /* Buttons */
+ @media (max-width: 768px) {
+
   .btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin: 8px 0;
-    font-size: 14px;
+    display: inline-block;   /* remove full width */
+    width: auto;             /* key fix */
+    padding: 8px 14px;
+    font-size: 13px;
+    margin: 6px 4px;
   }
+
+}
 
   /* CTA Footer */
   .cta-footer {
@@ -275,6 +279,7 @@ h2 {
     width: 30px;
   }
 }
+
   </style>
 </head>
 <body>
